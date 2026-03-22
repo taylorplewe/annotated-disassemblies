@@ -4,6 +4,8 @@
 ;
 ; however, as this runs on a 64-bit machine, this process can be greatly optimized by comparing 64 bits at a time instead of just 8, where possible. But to do this, proper length checking must be done every step of the way--this explains like 90% of the code.
 ;
+; note that with SIMD, the process could be optimized even further by comparing up to 512 bits (64 bytes) at a time. My guess as to why this is not used here is that someone ran the numbers and found that for most cases that is overkill, and the overhead of having to do even more length checking just hurts more than it helps?
+;
 ; this code is taken straight from `vcruntime140.dll`.
 
 ; in:
