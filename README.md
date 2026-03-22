@@ -3,6 +3,7 @@ This is a collection of various annotated disassemblies I've done while trying t
 Links:
 - [Compiler Explorer](https://godbolt.org) (also known as "godbolt")
 
+Disassemblies:
 - `string_view_contains` - the `contains()` method on a C++ `std::basic_string_view<char>`
   - disassembly taken from simply running the code `my_string_view.contains(needle)` in godbolt with compiler flags `-std=c++23 -O3 -mabi=ms`
 - `memcmp` - the C standard library's `memcmp()` method, specifically MSVC's version of it taken from `vcruntime.lib`
