@@ -1,3 +1,7 @@
+; Essentially, this routine works exactly how you might expect; given a length, compare each byte of src1 to src2 until length is depleted. (See `CompareByteByByte` below for this implementation.)
+;
+; However, as this runs on a 64-bit machine, this process can be greatly optimized by comparing 64 bits at a time instead of just 8, where possible. But to do this, proper length checking must be done every step of the way--this explains like 90% of the code.
+
 ; in:
 ;   rcx = src1 pointer
 ;   rdx = src2 pointer
